@@ -4,10 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
     <title>Jeopardy</title>
   </head>
   <body>
-    <h1>Round One</h1>
+    <div class="Flexbox">
+
+      <h1 class="title">Round One</h1>
+
+      <h2 class="subtitle">Player 1 Starts!</h2>
+
+      <div class="gameGrid">
+        <div class="cat">Stupid Answers</div>
+        <div class="cat">Word Origins</div>
+        <div class="cat">Pop Music</div>
+        <div class="cat">Potent Potables</div>
+        <div class="cat">Sports</div>
+        <div class="cat">Canadian Cities</div>
+        <div class="btn">200</div>
+        <div class="btn">200</div>        
+        <div class="btn">200</div>       
+        <div class="btn">200</div>
+        <div class="btn">200</div>
+        <div class="btn">200</div>
+        <div class="btn">400</div>
+        <div class="btn">400</div>
+        <div class="btn">400</div>
+        <div class="btn">400</div>
+        <div class="btn">400</div>
+        <div class="btn">400</div>
+        <div class="btn">600</div>
+        <div class="btn">600</div>
+        <div class="btn">600</div>
+        <div class="btn">600</div>
+        <div class="btn">600</div>
+        <div class="btn">600</div>
+        <div class="btn">800</div>
+        <div class="btn">800</div>
+        <div class="btn">800</div>
+        <div class="btn">800</div>
+        <div class="btn">800</div>
+        <div class="btn">800</div>
+        <div class="btn">1000</div>
+        <div class="btn">1000</div>
+        <div class="btn">1000</div>
+        <div class="btn">1000</div>
+        <div class="btn">1000</div>
+        <div class="btn">1000</div>
+      </div>
+
+      <form class=answerField>
+        <label class="subtitle" for="response">Response:</label>
+        <input type="text" id="Answer" name="answer"><br><br>
+        <button class="btn">Guess</button>  <button class="btn">Pass</button>
+      </form>
+
+      <div class="scoreboard">
+        <h2 class="subtitle">Player 1 Score: </h2>
+        <div class="cat">0</div>
+        <h2 class="subtitle">Player 2 Score:</h2>
+        <div class="cat">0</div>
+      </div>
+
+      <a class="playbutton" href="/jeopardy-board-WillMashrick/round-2.html"> Round Two!</a>
+
+      <footer class="foot" >Site design © 2023 Will Mashrick on behalf of Jeopardy </footer>
+
+    </div>
     <!-- Do not change the script source. Allows import/export to work. -->
     <script src="./scripts/index.js" type="module"></script>
   </body>

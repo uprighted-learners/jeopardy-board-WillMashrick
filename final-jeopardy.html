@@ -4,10 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
     <title>Final Jeopardy</title>
   </head>
   <body>
-    <h1>Final Jeopardy</h1>
+    <div class="Flexbox">
+
+      <h1 class="title">Final Jeopardy!</h1>
+
+      <div class="finalcat">
+        Movie Characters
+      </div>
+
+      <div class="finalclue">
+        900 years old when he died, he spoke in OSV syntax, object-subject-verb
+      </div>
+
+      <form class=finalAnswerField>
+        <label class="subtitle" for="wager">Final Wager:</label>
+        <input type="number" id="wager" name="wager"><br><br>
+        <label class="subtitle" for="response">Response:</label>
+        <input type="text" id="Answer" name="answer"><br><br>
+        <button class="btn">Bet</button> 
+      </form>
+
+      <footer class="foot" >Site design © 2023 Will Mashrick on behalf of Jeopardy </footer>
+
+    </div>
     <!-- Do not change the script source. Allows import/export to work. -->
     <script src="./scripts/index.js" type="module"></script>
   </body>
