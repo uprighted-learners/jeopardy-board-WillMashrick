@@ -1,7 +1,9 @@
+/* background for page */
 body {
     background-color: #060CE9;
 }
 
+/* styling for all main flex containers */
 .Flexbox {
     display: flex;
     flex-direction: column;
@@ -9,6 +11,7 @@ body {
     align-items: center;
 }
 
+/* styling for main titles */
 .title {
     color: white;
     font-size: 48px;
@@ -19,12 +22,14 @@ body {
     background-color: #115ff4;
 }
 
+/* styling for subtitles */
 .subtitle {
     color: gold;
     padding: 10px;
     margin: 25px;
 }
 
+/* scaling down welcome page image and adding border */
 #landingImage {
     height: 50%;
     width: 50%;
@@ -32,6 +37,7 @@ body {
     border-radius: 10px;
 }
 
+/* styling for buttons */
 .playbutton {
     margin: 25px;
     padding: 10px 25px 10px 25px;
@@ -42,6 +48,7 @@ body {
     border-radius: 5px;
 }
 
+/* styling for buttons hover pseudo class */
 .playbutton:hover {
     background-color: white;
     color: black;
@@ -50,10 +57,12 @@ body {
     font-size: 20px;
 }
 
+/* adding padding to top of footer */
 .foot {
     padding-top: 25px;
 }
 
+/* grid layout and styling for round 1 and 2 game board */
 .gameGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -62,19 +71,22 @@ body {
     background-color: black;
 }
 
+/* styling for category headers */
 .cat {
     display: flex;
-    padding: 10px 25px 20px 25px;
-    background-color: #060CE9;
+    padding: 10px 25px 20px 25px !important;
+    background-color: #060CE9 !important;
     text-decoration: none;
     align-items: center;
     justify-content: center;
     font-size: 42px;
     font-weight: bold;
-    color: white;
-    margin-bottom: 10px;
+    color: white !important;
+    margin-bottom: 10px !important;
+    text-shadow: 2px 2px black !important;
 }
 
+/* final jeopardy category styling */
 .finalcat {
     padding: 95px 45px 95px 45px;
     background-color: #060CE9;
@@ -89,6 +101,7 @@ body {
     border: 3px solid black;
 }
 
+/* final jeopardy question styling */
 .finalclue {
     padding: 95px 45px 95px 45px;
     background-color: #060CE9;
@@ -103,6 +116,8 @@ body {
     border: 3px solid black;
 }
 
+
+/* styling for game guess and pass buttons */
 .btn {
     padding: 10px 25px 20px 25px;
     background-color: #060CE9;
@@ -114,6 +129,7 @@ body {
     text-shadow: 2px 2px black;
 }
 
+/* pseudo class for hovering over guess and pass buttons*/
 .btn:hover {
     padding: 10px 25px 20px 25px;
     background-color:#115ff4;
@@ -125,6 +141,32 @@ body {
     text-shadow: 2px 2px black;
 }
 
+/* styling for game board $ tiles */
+.gameGrid > div {
+    padding: 10px 25px 20px 25px;
+    background-color: #060CE9;
+    text-decoration: none;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 2px 2px black;
+}
+
+
+/* pseudo class for hovering over game board tiles*/
+.gameGrid > div:hover {
+    padding: 10px 25px 20px 25px;
+    background-color:#115ff4;
+    text-decoration: none;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+/* styling for round 2 button id */
 #Round2button {
     margin: 25px;
     padding: 10px 25px 10px 25px;
@@ -134,11 +176,11 @@ body {
     border: 2px solid #aaaaaa;
     border-radius: 5px;
 }
-
+/* adding top margin for answer input */
 .answerField {
     margin-top: 25px;
 }
-
+/* styling for round scoreboards */
 .scoreboard {
     display: flex;
     flex-direction: row;
@@ -150,10 +192,12 @@ body {
     border-radius: 5px;
 }
 
+/* centering text of scoreboard children */
 .scoreboard > {
     text-align: center;
 }
 
+/* flex styling for final jeopardy answer inputs */
 .finalAnswerField  {
     display: flex;
     flex-direction: column;

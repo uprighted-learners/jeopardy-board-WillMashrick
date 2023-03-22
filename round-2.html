@@ -4,70 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>Jeopardy</title>
-    <script src="./scripts/index.js" type="module"></script>
+
   </head>
   <body>
+    <!-- main flex container -->
     <div class="Flexbox">
 
       <h1 class="title">Double Jeopardy!</h1>
 
       <h2 class="subtitle">Player 1 Starts!</h2>
-
+      <!-- game board grid setup -->
       <div class="gameGrid">
-        <div class="cat">Classical Music</div>
-        <div class="cat">The Movies</div>
-        <div class="cat">Food</div>
-        <div class="cat">Chemistry</div>
-        <div class="cat">4-Letter Words</div>
-        <div class="cat">Islands</div>
-        <div class="btn">400</div>
-        <div class="btn">400</div>
-        <div class="btn">400</div>
-        <div class="btn">400</div>
-        <div class="btn">400</div>
-        <div class="btn">400</div>
-        <div class="btn">800</div>
-        <div class="btn">800</div>
-        <div class="btn">800</div>
-        <div class="btn">800</div>
-        <div class="btn">800</div>
-        <div class="btn">800</div>
-        <div class="btn">1200</div>
-        <div class="btn">1200</div>
-        <div class="btn">1200</div>
-        <div class="btn">1200</div>
-        <div class="btn">1200</div>
-        <div class="btn">1200</div>
-        <div class="btn">1600</div>
-        <div class="btn">1600</div>
-        <div class="btn">1600</div>
-        <div class="btn">1600</div>
-        <div class="btn">1600</div>
-        <div class="btn">1600</div>
-        <div class="btn">2000</div>
-        <div class="btn">2000</div>
-        <div class="btn">2000</div>
-        <div class="btn">2000</div>
-        <div class="btn">2000</div>
-        <div class="btn">2000</div>
+        <div class="cat">Nature</div>
+        <div class="cat">Animals</div>
+        <div class="cat">Computers</div>
+        <div class="cat">Mythology</div>
+        <div class="cat">History</div>
+        <div class="cat">General</div>
+        <div class="tile C7">$400</div>
+        <div class="tile C8">$400</div>
+        <div class="tile C9">$400</div>
+        <div class="tile C10">$400</div>
+        <div class="tile C11">$400</div>
+        <div class="tile C12">$400</div>
+        <div class="tile C7">$800</div>
+        <div class="tile C8">$800</div>
+        <div class="tile C9">$800</div>
+        <div class="tile C10">$800</div>
+        <div class="tile C11">$800</div>
+        <div class="tile C12">$800</div>
+        <div class="tile C7">$1200</div>
+        <div class="tile C8">$1200</div>
+        <div class="tile C9">$1200</div>
+        <div class="tile C10">$1200</div>
+        <div class="tile C11">$1200</div>
+        <div class="tile C12">$1200</div>
+        <div class="tile C7">$1600</div>
+        <div class="tile C8">$1600</div>
+        <div class="tile C9">$1600</div>
+        <div class="tile C10">$1600</div>
+        <div class="tile C11">$1600</div>
+        <div class="tile C12">$1600</div>
+        <div class="tile C7">$2000</div>
+        <div class="tile C8">$2000</div>
+        <div class="tile C9">$2000</div>
+        <div class="tile C10">$2000</div>
+        <div class="tile C11">$2000</div>
+        <div class="tile C12">$2000</div>
       </div>
-
-      <form class=answerField>
+      <!-- answer input/pass button -->
+      <form class="answerField">
         <label class="subtitle" for="response">Response:</label>
-        <input type="text" id="Answer" name="answer"><br><br>
-        <button class="btn">Guess</button>  <button class="btn">Pass</button>
+        <input type="text" id="Answer" name="answer" /><br /><br />
+        <button class="btn">Guess</button> <button class="btn">Pass</button>
       </form>
-
+      <!-- scoreboard -->
       <div class="scoreboard">
-        <h2 class="subtitle">Player 1 Score: </h2>
+        <h2 class="subtitle">Player 1 Score:</h2>
         <div class="cat">0</div>
         <h2 class="subtitle">Player 2 Score:</h2>
         <div class="cat">0</div>
       </div>
+      <!-- linking to final jeopardy page -->
+      <a class="playbutton" href="./final-jeopardy.html"> Final Round!</a>
 
-      <a class="playbutton" href="final-jeopardy.html"> Final Round!</a>
+      <footer class="foot">
+        Site design © 2023 Will Mashrick on behalf of Jeopardy
+      </footer>
+    </div>
 
-      <footer class="foot" >Site design © 2023 Will Mashrick on behalf of Jeopardy </footer>
-
+    <script src="./scripts/index.js" type="module"></script>
+  </body>
+</html>

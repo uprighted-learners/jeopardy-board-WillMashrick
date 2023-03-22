@@ -8,65 +8,69 @@
     <title>Jeopardy</title>
   </head>
   <body>
+    <!-- main flex container -->
     <div class="Flexbox">
 
       <h1 class="title">Round One</h1>
 
-      <h2 class="subtitle">Player 1 Starts!</h2>
-
+      <h2 id="r1-sub" class="subtitle"></h2>
+<!-- Div to set up grid in order to build out game board -->
       <div class="gameGrid">
-        <div class="cat">Stupid Answers</div>
-        <div class="cat">Word Origins</div>
-        <div class="cat">Pop Music</div>
-        <div class="cat">Potent Potables</div>
-        <div class="cat">Sports</div>
-        <div class="cat">Canadian Cities</div>
-        <div class="btn">200</div>
-        <div class="btn">200</div>        
-        <div class="btn">200</div>       
-        <div class="btn">200</div>
-        <div class="btn">200</div>
-        <div class="btn">200</div>
-        <div class="btn">400</div>
-        <div class="btn">400</div>
-        <div class="btn">400</div>
-        <div class="btn">400</div>
-        <div class="btn">400</div>
-        <div class="btn">400</div>
-        <div class="btn">600</div>
-        <div class="btn">600</div>
-        <div class="btn">600</div>
-        <div class="btn">600</div>
-        <div class="btn">600</div>
-        <div class="btn">600</div>
-        <div class="btn">800</div>
-        <div class="btn">800</div>
-        <div class="btn">800</div>
-        <div class="btn">800</div>
-        <div class="btn">800</div>
-        <div class="btn">800</div>
-        <div class="btn">1000</div>
-        <div class="btn">1000</div>
-        <div class="btn">1000</div>
-        <div class="btn">1000</div>
-        <div class="btn">1000</div>
-        <div class="btn">1000</div>
+        <div class="cat">Nature</div>
+        <div class="cat">Animals</div>
+        <div class="cat">Computers</div>
+        <div class="cat">Mythology</div>
+        <div class="cat">History</div>
+        <div class="cat">General</div>
+          <div class="tile C1">$200</div>
+          <div class="tile C2">$200</div>        
+          <div class="tile C3">$200</div>       
+          <div class="tile C4">$200</div>
+          <div class="tile C5">$200</div>
+          <div class="tile C6">$200</div>
+          <div class="tile C1">$400</div>
+          <div class="tile C2">$400</div>
+          <div class="tile C3">$400</div>
+          <div class="tile C4">$400</div>
+          <div class="tile C5">$400</div>
+          <div class="tile C6">$400</div>
+          <div class="tile C1">$600</div>
+          <div class="tile C2">$600</div>
+          <div class="tile C3">$600</div>
+          <div class="tile C4">$600</div>
+          <div class="tile C5">$600</div>
+          <div class="tile C6">$600</div>
+          <div class="tile C1">$800</div>
+          <div class="tile C2">$800</div>
+          <div class="tile C3">$800</div>
+          <div class="tile C4">$800</div>
+          <div class="tile C5">$800</div>
+          <div class="tile C6">$800</div>
+          <div class="tile C1">$1000</div>
+          <div class="tile C2">$1000</div>
+          <div class="tile C3">$1000</div>
+          <div class="tile C4">$1000</div>
+          <div class="tile C5">$1000</div>
+          <div class="tile C6">$1000</div>
       </div>
+
+      <!-- setting up input for player answer -->
 
       <form class=answerField>
         <label class="subtitle" for="response">Response:</label>
         <input type="text" id="Answer" name="answer"><br><br>
-        <button class="btn">Guess</button>  <button class="btn">Pass</button>
+        <button id="guessBtn" class="btn">Guess</button>  <button id="passBtn" class="btn">Pass</button>
       </form>
 
+      <!-- scoreboard to hold player 1 and 2 scores -->
       <div class="scoreboard">
         <h2 class="subtitle">Player 1 Score: </h2>
         <div class="cat">0</div>
         <h2 class="subtitle">Player 2 Score:</h2>
         <div class="cat">0</div>
       </div>
-
-      <a class="playbutton" href="/jeopardy-board-WillMashrick/round-2.html"> Round Two!</a>
+<!-- linking round one page to round 2 -->
+      <a id="r2Btn" class="playbutton" href="./round-2.html"> Round Two!</a>
 
       <footer class="foot" >Site design © 2023 Will Mashrick on behalf of Jeopardy </footer>
 
