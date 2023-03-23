@@ -9,8 +9,42 @@
 
 // Start message
 const startMessageP1 = document.getElementById("r1-sub");
+// setting player turn, score, current question, 
+let playerTurn = 0;
 
-// buttons to disable
+
+
+let player1Score = 0;
+let player2Score = 0;
+
+let currentQuest = null;
+
+let alreadyPassed = false;
+
+let readyForNewTile = true;
+
+// function to update player score
+function changeScore (playerNum,scoreChange) {
+  if (playerNum === 1) {
+    player1Score += scoreChange;
+    document.getElementById("score1").innerText = player1Score;
+  } else {
+    player2Score += scoreChange;
+    document.getElementById("score2").innerText = player2Score;
+  }
+}
+
+changeScore(1, 0);
+changeScore(2, 0);
+
+// function to change turn
+function changeTurn () {
+  playerTurn = playerTurn === 1 ? 2 : 1;
+  // console.log(playerNum);
+  startMessageP1.innerText = `Player ${playerTurn}'s Turn!`;
+};
+
+// button variables to be disabled upon round one page loading
 
 const guessBtn = document.getElementById("guessBtn");
 
@@ -18,11 +52,13 @@ const passBtn = document.getElementById("passBtn");
 
 const r2Btn = document.getElementById("r2Btn");
 
-// Game tiles
+// Game tile global variables
 
 const gameTiles = document.querySelectorAll(".tile");
 
 const tile = document.querySelector(".tile");
+
+let currentTile = null;
 
 // Game tiles separated by column/category
 
@@ -73,7 +109,7 @@ window.addEventListener("load", (e) => {
   passBtn.disabled = true;
 
   setTimeout(() => {
-    startMessageP1.innerText = "Player 1 Starts!";
+    changeTurn();
   }, 1000);
 });
 
@@ -99,6 +135,7 @@ fetch("./placeholder-questions.json")
     for (let index = 0; index < (nature.length); index++) {
       displayQuestion(naturePqs[index], nature, index);
       console.log(naturePqs[index]);
+      console.log(nature);
     };
 
     const animalsPqs = PQs.filter((item) => {
@@ -145,43 +182,77 @@ fetch("./placeholder-questions.json")
     for (let index = 0; index < general.length; index++) {
       displayQuestion(generalPqs[index], general, index);
     };
-
-
-
-
-    // for (let i of PQs) {
-    //   if (i.category == "Nature") {
-    //     let natObj = i;
-    //     console.log(natObj);
-    //     displayQuestion(natObj);
-
-    //   } else if (i.category == "Animals") {
-        // console.log(i);
-
-    //   } else if (i.category == "Computers") {
-        // console.log(i);
-    //   }
-    // }
   });
 
 // }
 
 // function to display question when game tiles are clicked
-
-function displayQuestion(quest, cat, index) {
-  const item = cat[index];
+// Alerts user if they try to select a new tile when they haven't guessed or passed on the current tile
+function displayQuestion(quest, tile, index) {
+  const item = tile[index];
   item.addEventListener("click", () => {
+    if (readyForNewTile !== true) {
+      let guessOrPass = document.getElementById("guessorpass");
+      guessOrPass.innerText = "Please guess or pass!";
+      setTimeout(() => {
+        guessOrPass.innerText = ""
+      },2000);
+      return
+    }
     item.innerText = quest.question;
     item.style.color = "white";
     item.style["font-size"] = "20px";
+    currentQuest = quest;
+    currentTile = item;
     // enable guess and pass button when first tile is clicked
     guessBtn.disabled = false;
     passBtn.disabled = false;
+    readyForNewTile = false;
   });
 };
 
-// function displayQuest(catObj) {
-//   for (let index = 0; index < nature.length; index++) {
-//     nature[index].innerText = catObj.question;
-//   }
-// }
+// pass button event: calls changeTurn and switches to the next players turn
+// if both players have passed, tile is closed out
+passBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const nextPlayer = playerTurn === 1 ? 2 : 1;
+  changeTurn(nextPlayer);
+  if (alreadyPassed) {
+    closeTile(currentTile);
+  } else {
+
+  alreadyPassed = true;
+  }
+
+});
+
+// on click event for guess
+// takes user input value and check for correct answer
+guessBtn.addEventListener("click", (e) => {
+  e.preventDefault(); 
+  let answerInput = document.getElementById("Answer");
+  let userGuess = answerInput.value;
+
+  let isCorrect = userGuess === currentQuest.answer;
+    console.log(currentQuest.answer);
+  if (isCorrect = true) {
+    changeScore(playerTurn, currentQuest.score);
+    closeTile(currentTile);
+  } else if (isCorrect = false) {
+    changeScore(playerTurn, -currentQuest.score);
+    if (alreadyPassed) {
+      closeTile(currentTile);
+    } else { 
+      alreadyPassed = true;
+    }
+  }
+  answerInput.value = "";
+  changeTurn();
+});
+
+// makes tile blank after it has been answered or passed by both players
+function closeTile (node) {
+  node.innerText = "";
+  readyForNewTile = true;
+}
+
