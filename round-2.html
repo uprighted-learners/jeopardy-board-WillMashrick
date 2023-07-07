@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Jeopardy</title>
-
   </head>
   <body>
     <!-- main flex container -->
     <div class="Flexbox">
-
       <h1 class="title">Double Jeopardy!</h1>
 
-      <h2 class="subtitle">Player 1 Starts!</h2>
+      <h2 class="startMsg subtitle">Player 1 Starts!</h2>
+      <h2 class="guessorpass subtitle"></h2>
       <!-- game board grid setup -->
       <div class="gameGrid">
         <div class="cat">Nature</div>
@@ -23,52 +22,55 @@
         <div class="cat">Mythology</div>
         <div class="cat">History</div>
         <div class="cat">General</div>
-        <div class="tile C7">$400</div>
-        <div class="tile C8">$400</div>
-        <div class="tile C9">$400</div>
-        <div class="tile C10">$400</div>
-        <div class="tile C11">$400</div>
-        <div class="tile C12">$400</div>
-        <div class="tile C7">$800</div>
-        <div class="tile C8">$800</div>
-        <div class="tile C9">$800</div>
-        <div class="tile C10">$800</div>
-        <div class="tile C11">$800</div>
-        <div class="tile C12">$800</div>
-        <div class="tile C7">$1200</div>
-        <div class="tile C8">$1200</div>
-        <div class="tile C9">$1200</div>
-        <div class="tile C10">$1200</div>
-        <div class="tile C11">$1200</div>
-        <div class="tile C12">$1200</div>
-        <div class="tile C7">$1600</div>
-        <div class="tile C8">$1600</div>
-        <div class="tile C9">$1600</div>
-        <div class="tile C10">$1600</div>
-        <div class="tile C11">$1600</div>
-        <div class="tile C12">$1600</div>
-        <div class="tile C7">$2000</div>
-        <div class="tile C8">$2000</div>
-        <div class="tile C9">$2000</div>
-        <div class="tile C10">$2000</div>
-        <div class="tile C11">$2000</div>
-        <div class="tile C12">$2000</div>
+        <div class="tile C1">$400</div>
+        <div class="tile C2">$400</div>
+        <div class="tile C3">$400</div>
+        <div class="tile C4">$400</div>
+        <div class="tile C5">$400</div>
+        <div class="tile C6">$400</div>
+        <div class="tile C1">$800</div>
+        <div class="tile C2">$800</div>
+        <div class="tile C3">$800</div>
+        <div class="tile C4">$800</div>
+        <div class="tile C5">$800</div>
+        <div class="tile C6">$800</div>
+        <div class="tile C1">$1200</div>
+        <div class="tile C2">$1200</div>
+        <div class="tile C3">$1200</div>
+        <div class="tile C4">$1200</div>
+        <div class="tile C5">$1200</div>
+        <div class="tile C6">$1200</div>
+        <div class="tile C1">$1600</div>
+        <div class="tile C2">$1600</div>
+        <div class="tile C3">$1600</div>
+        <div class="tile C4">$1600</div>
+        <div class="tile C5">$1600</div>
+        <div class="tile C6">$1600</div>
+        <div class="tile C1">$2000</div>
+        <div class="tile C2">$2000</div>
+        <div class="tile C3">$2000</div>
+        <div class="tile C4">$2000</div>
+        <div class="tile C5">$2000</div>
+        <div class="tile C6">$2000</div>
       </div>
       <!-- answer input/pass button -->
       <form class="answerField">
         <label class="subtitle" for="response">Response:</label>
         <input type="text" id="Answer" name="answer" /><br /><br />
-        <button class="btn">Guess</button> <button class="btn">Pass</button>
+        <button class="guessBtn btn">Guess</button>
+        <button class="passBtn btn">Pass</button>
       </form>
       <!-- scoreboard -->
       <div class="scoreboard">
         <h2 class="subtitle">Player 1 Score:</h2>
-        <div class="cat">0</div>
+        <div id="score1" class="cat">0</div>
         <h2 class="subtitle">Player 2 Score:</h2>
-        <div class="cat">0</div>
+        <div id="score2" class="cat">0</div>
       </div>
       <!-- linking to final jeopardy page -->
-      <a class="playbutton" href="./final-jeopardy.html"> Final Round!</a>
+      <a class="roundChgBtn playbutton" href="./final-jeopardy.html">
+        Final Round!</a
+      >
 
       <footer class="foot">
         Site design © 2023 Will Mashrick on behalf of Jeopardy

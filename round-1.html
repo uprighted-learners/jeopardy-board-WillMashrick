@@ -4,18 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>Jeopardy</title>
   </head>
   <body>
     <!-- main flex container -->
     <div class="Flexbox">
-
       <h1 class="title">Round One</h1>
 
-      <h2 id="r1-sub" class="subtitle"></h2>
-      <h2 id="guessorpass" class="subtitle"></h2>
-<!-- Div to set up grid in order to build out game board -->
+      <h2 class="startMsg subtitle"></h2>
+      <h2 class="guessorpass subtitle"></h2>
+      <!-- Div to set up grid in order to build out game board -->
       <div class="gameGrid">
         <div class="cat">Nature</div>
         <div class="cat">Animals</div>
@@ -23,58 +22,62 @@
         <div class="cat">Mythology</div>
         <div class="cat">History</div>
         <div class="cat">General</div>
-          <div class="tile C1">$200</div>
-          <div class="tile C2">$200</div>        
-          <div class="tile C3">$200</div>       
-          <div class="tile C4">$200</div>
-          <div class="tile C5">$200</div>
-          <div class="tile C6">$200</div>
-          <div class="tile C1">$400</div>
-          <div class="tile C2">$400</div>
-          <div class="tile C3">$400</div>
-          <div class="tile C4">$400</div>
-          <div class="tile C5">$400</div>
-          <div class="tile C6">$400</div>
-          <div class="tile C1">$600</div>
-          <div class="tile C2">$600</div>
-          <div class="tile C3">$600</div>
-          <div class="tile C4">$600</div>
-          <div class="tile C5">$600</div>
-          <div class="tile C6">$600</div>
-          <div class="tile C1">$800</div>
-          <div class="tile C2">$800</div>
-          <div class="tile C3">$800</div>
-          <div class="tile C4">$800</div>
-          <div class="tile C5">$800</div>
-          <div class="tile C6">$800</div>
-          <div class="tile C1">$1000</div>
-          <div class="tile C2">$1000</div>
-          <div class="tile C3">$1000</div>
-          <div class="tile C4">$1000</div>
-          <div class="tile C5">$1000</div>
-          <div class="tile C6">$1000</div>
+        <div class="tile C1">$200</div>
+        <div class="tile C2">$200</div>
+        <div class="tile C3">$200</div>
+        <div class="tile C4">$200</div>
+        <div class="tile C5">$200</div>
+        <div class="tile C6">$200</div>
+        <div class="tile C1">$400</div>
+        <div class="tile C2">$400</div>
+        <div class="tile C3">$400</div>
+        <div class="tile C4">$400</div>
+        <div class="tile C5">$400</div>
+        <div class="tile C6">$400</div>
+        <div class="tile C1">$600</div>
+        <div class="tile C2">$600</div>
+        <div class="tile C3">$600</div>
+        <div class="tile C4">$600</div>
+        <div class="tile C5">$600</div>
+        <div class="tile C6">$600</div>
+        <div class="tile C1">$800</div>
+        <div class="tile C2">$800</div>
+        <div class="tile C3">$800</div>
+        <div class="tile C4">$800</div>
+        <div class="tile C5">$800</div>
+        <div class="tile C6">$800</div>
+        <div class="tile C1">$1000</div>
+        <div class="tile C2">$1000</div>
+        <div class="tile C3">$1000</div>
+        <div class="tile C4">$1000</div>
+        <div class="tile C5">$1000</div>
+        <div class="tile C6">$1000</div>
       </div>
 
       <!-- setting up input for player answer -->
 
-      <form class=answerField onsubmit="return false;">
+      <form class="answerField" onsubmit="return false;">
         <label class="subtitle" for="response">Response:</label>
-        <input type="text" id="Answer" name="answer"><br><br>
-        <button id="guessBtn" class="btn">Guess</button>  <button id="passBtn" class="btn">Pass</button>
+        <input type="text" id="Answer" name="answer" /><br /><br />
+        <button class="guessBtn btn">Guess</button>
+        <button class="passBtn btn">Pass</button>
       </form>
 
       <!-- scoreboard to hold player 1 and 2 scores -->
       <div class="scoreboard">
-        <h2 class="subtitle">Player 1 Score: </h2>
+        <h2 class="subtitle">Player 1 Score:</h2>
         <div id="score1" class="cat"></div>
         <h2 class="subtitle">Player 2 Score:</h2>
         <div id="score2" class="cat"></div>
       </div>
-<!-- linking round one page to round 2 -->
-      <a id="r2Btn" class="playbutton" href="./round-2.html"> Round Two!</a>
+      <!-- linking round one page to round 2 -->
+      <a class="roundChgBtn playbutton" href="./round-2.html?round=2">
+        Round Two!</a
+      >
 
-      <footer class="foot" >Site design © 2023 Will Mashrick on behalf of Jeopardy </footer>
-
+      <footer class="foot">
+        Site design © 2023 Will Mashrick on behalf of Jeopardy
+      </footer>
     </div>
     <!-- Do not change the script source. Allows import/export to work. -->
     <script src="./scripts/index.js" type="module"></script>
